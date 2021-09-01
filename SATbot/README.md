@@ -4,6 +4,8 @@
 
 2) You may need to change the file paths in 'classifiers.py' and 'rule_based_model.py'
 
+3) This chatbot uses the react-chatbot-kit library: https://fredrikoseberg.github.io/react-chatbot-kit-docs/
+
 
 #### To run the code in this folder locally, after cloning open a terminal window and do:
 
