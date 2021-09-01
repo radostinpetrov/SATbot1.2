@@ -1,4 +1,4 @@
-#### Welcome to the SAT chatbot repository. Please see a list of the folders and their contents below:
+### Welcome to the SAT chatbot repository. Please see a list of the folders and their contents below:
 
 1. <i>Data:</i> contains the EmpatheticPersonas dataset as well as the other datasets used in the model training pipeline
 
