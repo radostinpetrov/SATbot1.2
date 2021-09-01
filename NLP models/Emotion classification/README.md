@@ -1,4 +1,4 @@
-#### Models for emotion classification.
+#### Models for emotion classification
 
 Results:
 
