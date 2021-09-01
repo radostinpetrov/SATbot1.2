@@ -1,4 +1,4 @@
-#### Additional datasets for double model fine-tuning
+#### Additional datasets for model fine-tuning
 
 Additional empathy dataset: 'emotional-reactions-reddit.csv' (Sharma et al., 2020)
 
