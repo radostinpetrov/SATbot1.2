@@ -2,9 +2,9 @@
 
 #### Notes: 
 
-1) The trained model files 'RoBERTa_emotion_best.pt' and 'T5_empathy_best.pt' are too large to be included in this repo. They can be obtained by running the Jupyter notebooks 'emotion classifier - RoBERTa fine-tuned on Emotion + our data.ipynb' and 'empathy classifier - T5 finetuned on our data.ipynb'
+1) Before running the code in this folder, please obtain the files 'RoBERTa_emotion_best.pt' and 'T5_empathy_best.pt' by running the Jupyter notebooks 'emotion classifier - RoBERTa fine-tuned on Emotion + our data.ipynb' and 'empathy classifier - T5 finetuned on our data.ipynb' in the NLP models folder
 
-2) You may need to change the file paths in 'classifiers.py' and 'rule_based_model.py'
+2) You may need to change the file paths in 'classifiers.py' and 'rule_based_model.py' to your local paths when running locally
 
 3) This chatbot uses the react-chatbot-kit library: https://fredrikoseberg.github.io/react-chatbot-kit-docs/
 
