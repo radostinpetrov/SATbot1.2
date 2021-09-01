@@ -1,6 +1,6 @@
 #### Welcome to the SAT chatbot repository. Please see a list of folders and their contents below:
 
-1. <i>Data:</i> contains the EmpatheticPersonas dataset as well as all the other datasets used in the model training pipeline
+1. <i>Data:</i> contains the EmpatheticPersonas dataset as well as the other datasets used in the model training pipeline
 
 2. <i>NLP models:</i> contains Jupyter notebooks for training and testing the emotion and empathy classifiers
 
