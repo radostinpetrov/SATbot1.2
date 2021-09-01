@@ -1,4 +1,4 @@
-#### Models for empathy recognition
+#### Models for empathy classification
 
 Results:
 
