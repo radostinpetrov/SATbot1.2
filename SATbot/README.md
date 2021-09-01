@@ -4,23 +4,38 @@ Notes:
 
 2) You may need to change the file paths in 'classifiers.py' and 'rule_based_model.py'
 
+
 To run the code in this folder locally, after cloning open a terminal window and do:
 
 $ pip3 install virtualenv
+
 $ virtualenv ./SATbot
+
 $ cd ./SATbot
+
 $ source bin/activate
+
 $ cd ./model
+
 $ python3 -m pip install -r requirements.txt
+
 $ set FLASK_APP=flask_backend_with_aws
+
 $ flask db init
+
 $ flask db migrate -m "testDB table"
+
 $ flask db upgrade
+
 $ nano .env   ---->  add DATABASE_URL="sqlite:////YOUR LOCAL PATH TO THE app.db FILE" to the .env file, save and exit
+
 $ flask run
+
 
 To launch the front end, open another terminal tab and do:
 
 $ cd ./SATbot/view
+
 $ npm i
+
 $ npm run start
