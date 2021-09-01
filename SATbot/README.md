@@ -1,11 +1,11 @@
-### Notes: 
+#### Notes: 
 
 1) The trained model files 'RoBERTa_emotion_best.pt' and 'T5_empathy_best.pt' are too heavy to be included in this repo. They can be obtained by running the Jupyter notebooks 
 
 2) You may need to change the file paths in 'classifiers.py' and 'rule_based_model.py'
 
 
-### To run the code in this folder locally, after cloning open a terminal window and do:
+#### To run the code in this folder locally, after cloning open a terminal window and do:
 
 $ pip3 install virtualenv
 
@@ -32,7 +32,7 @@ $ nano .env   ---->  add DATABASE_URL="sqlite:////YOUR LOCAL PATH TO THE app.db 
 $ flask run
 
 
-### To launch the front end, open another terminal tab and do:
+#### To launch the front end, open another terminal tab and do:
 
 $ cd ./SATbot/view
 
