@@ -4,6 +4,6 @@
 
 2. <i>NLP models:</i> contains Jupyter notebooks for training and testing the emotion and empathy classifiers
 
-3. <i>SATbot:</i> contains the implementation files of the chatbot web app. Back-end and front-end can be run locally by following the README
+3. <i>SATbot:</i> contains the implementation files of the chatbot web app. Back-end and front-end can be run locally by following the instructions in the README
 
 4. <i>Trial evaluation:</i> contains the human trial results and their analysis
