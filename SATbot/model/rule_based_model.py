@@ -8,6 +8,7 @@ import random
 from collections import deque
 import re
 import datetime
+import time
 
 nltk.download("wordnet")
 from nltk.corpus import wordnet  # noqa
@@ -16,12 +17,11 @@ from nltk.corpus import wordnet  # noqa
 class ModelDecisionMaker:
     def __init__(self):
 
-        #change paths here if necessary
-        self.kai = pd.read_csv('kai.csv', encoding='ISO-8859-1') #change path
-        self.robert = pd.read_csv('robert.csv', encoding='ISO-8859-1')
-        self.gabrielle = pd.read_csv('gabrielle.csv', encoding='ISO-8859-1')
-        self.arman = pd.read_csv('arman.csv', encoding='ISO-8859-1')
-        self.olivia = pd.read_csv('olivia.csv', encoding='ISO-8859-1')
+        self.kai = pd.read_csv('/Users/lisaxy/SATbot/model/kai.csv', encoding='ISO-8859-1') #change path
+        self.robert = pd.read_csv('/Users/lisaxy/SATbot/model/robert.csv', encoding='ISO-8859-1')
+        self.gabrielle = pd.read_csv('/Users/lisaxy/SATbot/model/gabrielle.csv', encoding='ISO-8859-1')
+        self.arman = pd.read_csv('/Users/lisaxy/SATbot/model/arman.csv', encoding='ISO-8859-1')
+        self.olivia = pd.read_csv('/Users/lisaxy/SATbot/model/olivia.csv', encoding='ISO-8859-1')
 
         # Titles from workshops (Title 7 adapted to give more information)
         self.PROTOCOL_TITLES = [
@@ -554,6 +554,7 @@ class ModelDecisionMaker:
 
 
     def get_opening_prompt(self, user_id):
+        time.sleep(7)
         if self.users_names[user_id] == "":
             opening_prompt = ["Hello, this is " + self.chosen_personas[user_id] + ". ", "How are you feeling today?"]
         else:
@@ -562,6 +563,7 @@ class ModelDecisionMaker:
 
 
     def get_restart_prompt(self, user_id):
+        time.sleep(7)
         if self.users_names[user_id] == "":
             restart_prompt = ["Please tell me again, how are you feeling today?"]
         else:
@@ -621,7 +623,7 @@ class ModelDecisionMaker:
     def get_best_sentence(self, column, prev_qs):
         maxscore = 0
         chosen = ''
-        for row in column.dropna().sample(n=25):
+        for row in column.dropna().sample(n=15): #was 25
              fitscore = get_sentence_score(row, prev_qs)
              if fitscore > maxscore:
                  maxscore = fitscore
@@ -629,7 +631,7 @@ class ModelDecisionMaker:
         if chosen != '':
             return chosen
         else:
-            return random.choice(column.dropna().sample(n=25).to_list())
+            return random.choice(column.dropna().sample(n=15).to_list()) #was 25
 
     def split_sentence(self, sentence):
         temp_list = re.split('(?<=[.?!]) +', sentence)
@@ -687,6 +689,7 @@ class ModelDecisionMaker:
         return "after_classification_positive"
 
     def get_model_prompt_project_emotion(self, user_id, app, db_session):
+        time.sleep(7)
         if self.chosen_personas[user_id] == "Robert":
             prompt = "Ok, thank you. Now, one last important thing: since you've told me you're feeling " + self.user_emotions[user_id].lower() + ", I would like you to try to project this emotion onto your childhood self. You can press 'continue' when you are ready and I'll suggest some protocols I think may be appropriate for you."
         elif self.chosen_personas[user_id] == "Gabrielle":
