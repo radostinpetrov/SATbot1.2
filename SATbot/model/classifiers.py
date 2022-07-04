@@ -16,7 +16,8 @@ from transformers import (
     GPT2Tokenizer,
     GPT2LMHeadModel,
     AutoModelWithLMHead,
-    AutoTokenizer
+    AutoTokenizer,
+    MegatronBertModel
 )
 from tokenizers import ByteLevelBPETokenizer, BertTokenizer
 
@@ -93,7 +94,7 @@ label2int = dict(zip(labels, list(range(len(labels)))))
 #from a publicly availably checkpoint and are located in the
 #nvidia folder
 with torch.no_grad():
-    bert_model = EmoClassificationModel(AutoModelWithLMHead.from_pretrained("nvidia/megatron-bert-cased-345m").base_model, len(labels))
+    bert_model = EmoClassificationModel(MegatronBertModel.from_pretrained("nvidia/megatron-bert-cased-345m").base_model, len(labels))
     bert_model.load_state_dict(torch.load('/mnt/c/Users/Rado/Desktop/Individual Project/SATbot/NLP models/Emotion classification/Megatron_BERT_finetuned.pt', map_location=torch.device('cpu'))) #change path
 
 #load emotion classifier (T5)
